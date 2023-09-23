@@ -1,0 +1,19 @@
+.header{
+    padding: 15px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    }
+
+    .logo{
+        display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    }
+    .emp{
+        font: normal normal bold 20px/25px Algerian;
+        color: rgb(72, 117, 20);
+        padding-left: 5px;
+    }
