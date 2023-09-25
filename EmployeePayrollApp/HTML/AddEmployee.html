@@ -1,372 +1,541 @@
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Add Employee</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="main">
-        <div class="header">
-            <img src="../assets/images/logo.png" class="logo" />
-            <div class="header-main">
-                <div class="employee">EMPLOYEE</div>
-                <div class="payroll">PAYROLL</div>
-            </div>
+      <div class="header">
+        <img src="../assets/images/logo.png" class="logo" />
+        <div class="header-main">
+          <div class="employee">EMPLOYEE</div>
+          <div class="payroll">PAYROLL</div>
         </div>
-        <div class="container">
-            <div class="container-main">
-                <div class="container-padding">
-                    <div class="container-header">Employee Payroll Form</div>
-                    <div class="label-container">
-                        <label class="label-header">Name</label>
-                        <div class="input-field">
-                            <input name="name" type="text" id="name" placeholder="Enter Name" class="input-text"
-                                onchange="nameChange(event)" />
-                        </div>
-                    </div>
-                    <div class="label-container">
-                        <label class="label-header">Profile Image</label>
-                        <div class="radio-field">
-                            <input type="radio" id="image1" name="image" value="1" class="input-radio"
-                                onchange="profileImageChange(event)" />
-                            <label><img src="../assets//profile-images/Ellipse -1.png" /></label>
-                            <input type="radio" id="image2" name="image" value="2" class="input-radio"
-                                onchange="profileImageChange(event)" />
-                            <label><img src="../assets//profile-images/Ellipse -2.png" /></label>
-                            <input type="radio" id="image3" name="image" value="3" class="input-radio"
-                                onchange="profileImageChange(event)" />
-                            <label><img src="../assets//profile-images/Ellipse -3.png" /></label>
-                            <input type="radio" id="image4" name="image" value="4" class="input-radio"
-                                onchange="profileImageChange(event)" />
-                            <label><img src="../assets//profile-images/Ellipse -4.png" /></label>
-                        </div>
-                    </div>
-                    <div class="label-container">
-                        <label class="label-header">Gender</label>
-                        <div class="radio-field-gender">
-                            <input type="radio" id="male" name="gender" value="M" class="input-radio"
-                                onchange="genderChange(event)" />
-                            <label class="gender-font" style="padding-right: 15px;">Male</label>
-                            <input type="radio" id="female" name="gender" value="F" class="input-radio"
-                                onchange="genderChange(event)" />
-                            <label class="gender-font">Female</label>
-                        </div>
-                    </div>
-                    <div class="label-container">
-                        <label class="label-header">Department</label>
-                        <div class="radio-field">
-                            <input type="checkbox" id="checkbox1" name="dept" value="HR" class="input-checkbox"
-                                onchange="deptChange(event)" />
-                            <label>HR</label>
-                            <input type="checkbox" id="checkbox2" name="dept" value="Sales" class="input-checkbox"
-                                onchange="deptChange(event)" />
-                            <label>Sales</label>
-                            <input type="checkbox" id="checkbox3" name="dept" value="Finance" class="input-checkbox"
-                                onchange="deptChange(event)" />
-                            <label>Finance</label>
-                            <input type="checkbox" id="checkbox4" name="dept" value="Engineer" class="input-checkbox"
-                                onchange="deptChange(event)" />
-                            <label>Engineer</label>
-                            <input type="checkbox" id="checkbox5" name="dept" value="Others" class="input-checkbox"
-                                onchange="deptChange(event)" />
-                            <label>Others</label>
-                        </div>
-                    </div>
-                    <div class="label-container">
-                        <label class="label-header">Salary</label>
-                        <div class="input-field">
-                            <select id="salary" name="salary" onchange="salaryChange(event)">
-                                <option value="">Select</option>
-                                <option value="1000">1000</option>
-                                <option value="2000">2000</option>
-                                <option value="3000">3000</option>
-                                <option value="4000">4000</option>
-                                <option value="5000">5000</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="label-container">
-                        <label class="label-header">Start Date</label>
-                        <div class="input-field-date">
-                            <select class="common-date" id="day" name="day" onchange="dayChange(event)">
-                                <option value="">Day</option>
-                                <option value="1000">1000</option>
-                                <option value="2000">2000</option>
-                                <option value="3000">3000</option>
-                                <option value="4000">4000</option>
-                                <option value="5000">5000</option>
-                            </select>
-                            <select class="common-date" id="month" name="month" onchange="monthChange(event)">
-                                <option value="">Month</option>
-                                <option value="1000">1000</option>
-                                <option value="2000">2000</option>
-                                <option value="3000">3000</option>
-                                <option value="4000">4000</option>
-                                <option value="5000">5000</option>
-                            </select>
-                            <select class="common-date" id="year" name="year" onchange="yearChange(event)" on>
-                                <option value="">Year</option>
-                                <option value="1000">1000</option>
-                                <option value="2000">2000</option>
-                                <option value="3000">3000</option>
-                                <option value="4000">4000</option>
-                                <option value="5000">5000</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="label-container-text">
-                        <label class="label-header">Notes</label>
-                        <div class="input-field">
-                            <textarea type="text" id="notes" placeholder="Comments" class="input-text" onchange="commentsChange(event)"></textarea>
-                        </div>
-                    </div>
-                    <div class="button-div">
-                        <button class="button-common" onclick="cancelClick()">Cancel</button>
-                        <div>
-                            <button class="button-common" onclick="submitClick()">Submit</button>
-                            <button class="button-common" onclick="resetClick()">Reset</button>
-                        </div>
-                    </div>
-                </div>
+      </div>
+      <div class="container">
+        <div class="container-main">
+          <div class="container-padding">
+            <div class="container-header">Employee Payroll Form</div>
+            <div class="label-container">
+              <label class="label-header">Name</label>
+              <div class="input-field">
+                <input
+                  name="name"
+                  type="text"
+                  id="name"
+                  placeholder="Enter Name"
+                  class="input-text"
+                  onchange="nameChange(event)"
+                />
+              </div>
             </div>
+            <div class="label-container">
+              <label class="label-header">Profile Image</label>
+              <div class="radio-field">
+                <input
+                  type="radio"
+                  id="image1"
+                  name="image"
+                  value="1"
+                  class="input-radio"
+                  onchange="profileImageChange(event)"
+                />
+                <label
+                  ><img src="../assets//profile-images/Ellipse -1.png"
+                /></label>
+                <input
+                  type="radio"
+                  id="image2"
+                  name="image"
+                  value="2"
+                  class="input-radio"
+                  onchange="profileImageChange(event)"
+                />
+                <label
+                  ><img src="../assets//profile-images/Ellipse -2.png"
+                /></label>
+                <input
+                  type="radio"
+                  id="image3"
+                  name="image"
+                  value="3"
+                  class="input-radio"
+                  onchange="profileImageChange(event)"
+                />
+                <label
+                  ><img src="../assets//profile-images/Ellipse -3.png"
+                /></label>
+                <input
+                  type="radio"
+                  id="image4"
+                  name="image"
+                  value="4"
+                  class="input-radio"
+                  onchange="profileImageChange(event)"
+                />
+                <label
+                  ><img src="../assets//profile-images/Ellipse -4.png"
+                /></label>
+              </div>
+            </div>
+            <div class="label-container">
+              <label class="label-header">Gender</label>
+              <div class="radio-field-gender">
+                <input
+                  type="radio"
+                  id="male"
+                  name="gender"
+                  value="M"
+                  class="input-radio"
+                  onchange="genderChange(event)"
+                />
+                <label class="gender-font" style="padding-right: 15px"
+                  >Male</label
+                >
+                <input
+                  type="radio"
+                  id="female"
+                  name="gender"
+                  value="F"
+                  class="input-radio"
+                  onchange="genderChange(event)"
+                />
+                <label class="gender-font">Female</label>
+              </div>
+            </div>
+            <div class="label-container">
+              <label class="label-header">Department</label>
+              <div class="radio-field">
+                <input
+                  type="checkbox"
+                  id="checkbox1"
+                  name="dept"
+                  value="HR"
+                  class="input-checkbox"
+                  onchange="deptChange(event)"
+                />
+                <label>HR</label>
+                <input
+                  type="checkbox"
+                  id="checkbox2"
+                  name="dept"
+                  value="Sales"
+                  class="input-checkbox"
+                  onchange="deptChange(event)"
+                />
+                <label>Sales</label>
+                <input
+                  type="checkbox"
+                  id="checkbox3"
+                  name="dept"
+                  value="Finance"
+                  class="input-checkbox"
+                  onchange="deptChange(event)"
+                />
+                <label>Finance</label>
+                <input
+                  type="checkbox"
+                  id="checkbox4"
+                  name="dept"
+                  value="Engineer"
+                  class="input-checkbox"
+                  onchange="deptChange(event)"
+                />
+                <label>Engineer</label>
+                <input
+                  type="checkbox"
+                  id="checkbox5"
+                  name="dept"
+                  value="Others"
+                  class="input-checkbox"
+                  onchange="deptChange(event)"
+                />
+                <label>Others</label>
+              </div>
+            </div>
+            <div class="label-container">
+              <label class="label-header">Salary</label>
+              <div class="input-field">
+                <select
+                  id="salary"
+                  name="salary"
+                  onchange="salaryChange(event)"
+                >
+                  <option value="">Select</option>
+                  <option value="1000">1000</option>
+                  <option value="2000">2000</option>
+                  <option value="3000">3000</option>
+                  <option value="4000">4000</option>
+                  <option value="5000">5000</option>
+                </select>
+              </div>
+            </div>
+            <div class="label-container">
+              <label class="label-header">Start Date</label>
+              <div class="input-field-date">
+                <select
+                  class="common-date"
+                  id="day"
+                  name="day"
+                  onchange="dayChange(event)"
+                >
+                  <option value="">Day</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                  </select>
+                  
+                </select>
+                <select
+                  class="common-date"
+                  id="month"
+                  name="month"
+                  onchange="monthChange(event)"
+                >
+                  <option value="">Month</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                  </select>
+                  
+                </select>
+                <select
+                  class="common-date"
+                  id="year"
+                  name="year"
+                  onchange="yearChange(event)"
+                >
+                  <option value="">Year</option>
+                  <option value="0">2000</option>
+                  <option value="1">2001</option>
+                  <option value="2">2002</option>
+                  <option value="3">2003</option>
+                  <option value="4">2004</option>
+                  <option value="5">2005</option>
+                  <option value="6">2006</option>
+                  <option value="7">2007</option>
+                  <option value="8">2008</option>
+                  <option value="9">2009</option>
+                  <option value="10">2010</option>
+                  <option value="11">2011</option>
+                  <option value="12">2012</option>
+                  <option value="13">2013</option>
+                  <option value="14">2014</option>
+                  <option value="15">2015</option>
+                  <option value="16">2016</option>
+                  <option value="17">2017</option>
+                  <option value="18">2018</option>
+                  <option value="19">2019</option>
+                  <option value="20">2020</option>
+                  <option value="21">2021</option>
+                  <option value="22">2022</option>
+                  <option value="23">2023</option>
+                  <option value="24">2024</option>
+                  <option value="25">2025</option>
+                  <option value="26">2026</option>
+                </select>
+              </div>
+            </div>
+            <div class="label-container-text">
+              <label class="label-header">Notes</label>
+              <div class="input-field">
+                <textarea
+                  type="text"
+                  id="notes"
+                  placeholder="Comments"
+                  class="input-text"
+                  onchange="commentsChange(event)"
+                ></textarea>
+              </div>
+            </div>
+            <div class="button-div">
+              <button class="button-common" onclick="cancelClick()">
+                Cancel
+              </button>
+              <div>
+                <button class="button-common" onclick="submitClick()">
+                  Submit
+                </button>
+                <button class="button-common" onclick="resetClick()">
+                  Reset
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-</body>
-<script>
-    window.addEventListener('DOMContentLoaded', (event) => {
-        var data = JSON.parse(localStorage.getItem("obj"));
-        console.log(data);
-        document.getElementById("name").value=data.name;
-        document.getElementById("salary").value=data.salary;
-    })
+  </body>
+  <script>
+    window.addEventListener("DOMContentLoaded", (event) => {
+      var data = JSON.parse(localStorage.getItem("obj"));
+      console.log(data);
+      document.getElementById("name").value = data.name;
+      document.getElementById("salary").value = data.salary;
+    });
     let name = "";
     let profileImage = "";
     let gender = "";
     let dept = "";
     let sal = "";
-    let day="",month="",year="";
-    let comment="";
+    let day = "",
+      month = "",
+      year = "";
+    let comment = "";
     function nameChange(event) {
-        name = event.target.value;
+      name = event.target.value;
     }
     function profileImageChange(event) {
-        profileImage = event.target.value;
+      profileImage = event.target.value;
     }
     function genderChange(event) {
-        gender = event.target.value;
+      gender = event.target.value;
     }
     function deptChange(event) {
-        dept = event.target.value;
+      dept = event.target.value;
     }
     function salaryChange(event) {
-        sal = event.target.value;
+      sal = event.target.value;
     }
-    function dayChange(event){
-        day = event.target.value;
+    function dayChange(event) {
+      day = event.target.value;
     }
-    function monthChange(event){
-        month = event.target.value;
+    function monthChange(event) {
+      month = event.target.value;
     }
-    function yearChange(event){
-        year = event.target.value;
+    function yearChange(event) {
+      year = event.target.value;
     }
-    function commentsChange(event){
-        comment = event.target.value;
+    function commentsChange(event) {
+      comment = event.target.value;
     }
-    function submitClick(){
-        console.log(name+"\n"+profileImage+"\n"+gender+"\n"+dept+"\n"+sal+"\n"+day+":"+month+":"+year+"\n"+comment);
-        var obj={
-            name:name,
-            profileImage:profileImage,
-            gender:gender,
-            department:dept,
-            salary:sal,
-            dob:day+":"+month+":"+year,
-            comments:comment
-        }
-        localStorage.setItem("EmpObject",JSON.stringify(obj));
-        var retrieval = localStorage.getItem("EmpObject");
-        console.log(retrieval);
+    function submitClick() {
+      console.log(
+        name +
+          "\n" +
+          profileImage +
+          "\n" +
+          gender +
+          "\n" +
+          dept +
+          "\n" +
+          sal +
+          "\n" +
+          day +
+          ":" +
+          month +
+          ":" +
+          year +
+          "\n" +
+          comment
+      );
+      var obj = {
+        name: name,
+        profileImage: profileImage,
+        gender: gender,
+        department: dept,
+        salary: sal,
+        dob: day + ":" + month + ":" + year,
+        comments: comment,
+      };
+      localStorage.setItem("EmpObject", JSON.stringify(obj));
+      var retrieval = localStorage.getItem("EmpObject");
+      console.log(retrieval);
     }
-    function resetClick(){
-        name="";
-        document.getElementById("name").value="";
-        sal="";
-        document.getElementById("salary").value="";
+    function resetClick() {
+        location.reload()
     }
-    function cancelClick(){
-        window.location.href="employeeHome.html";
+    function cancelClick() {
+      window.location.href = "employeeHome.html";
     }
-</script>
-<style>
+  </script>
+  <style>
     .button-div {
-        display: flex;
-        justify-content: space-between;
-        padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      padding-top: 20px;
     }
 
     .button-common {
-        background: #E2E2E2 0% 0% no-repeat padding-box;
-        border: 1px solid #969696;
-        border-radius: 5px;
-        height: 35px;
-        width: 100px;
-        font: normal normal normal 16px/19px Roboto;
-        letter-spacing: 0px;
-        color: #42515F;
+      background: #e2e2e2 0% 0% no-repeat padding-box;
+      border: 1px solid #969696;
+      border-radius: 5px;
+      height: 35px;
+      width: 100px;
+      font: normal normal normal 16px/19px Roboto;
+      letter-spacing: 0px;
+      color: #42515f;
     }
 
     .label-container-text {
-        display: flex;
-        justify-content: space-between;
-        padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      padding-top: 20px;
     }
 
     textarea#notes {
-        width: 300px;
-        height: 60px;
+      width: 300px;
+      height: 60px;
     }
 
     .gender-font {
-        font: normal normal normal 18px/24px Roboto;
-        letter-spacing: 0px;
-        color: #42515F;
+      font: normal normal normal 18px/24px Roboto;
+      letter-spacing: 0px;
+      color: #42515f;
     }
 
     .logo {
-        width: 50px;
-        height: 47px;
-        padding-right: 3px;
+      width: 50px;
+      height: 47px;
+      padding-right: 3px;
     }
 
     .header {
-        display: flex;
-        align-items: center;
-        padding-left: 120px;
-        height: 80px;
+      display: flex;
+      align-items: center;
+      padding-left: 120px;
+      height: 80px;
     }
 
     .header-main {
-        width: 127px;
+      width: 127px;
     }
 
     .employee {
-        height: 24px;
-        font: normal normal bold 22px/25px Montserrat;
-        color: #82A70C;
+      height: 24px;
+      font: normal normal bold 22px/25px Montserrat;
+      color: #82a70c;
     }
 
     .payroll {
-        height: 24px;
-        font: normal normal bold 22px/25px Montserrat;
+      height: 24px;
+      font: normal normal bold 22px/25px Montserrat;
     }
 
     .container {
-        height: calc(100% - 80px);
-        background: #F7F7F7 0% 0% no-repeat padding-box;
-        padding: 0px 120px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+      height: calc(100% - 80px);
+      background: #f7f7f7 0% 0% no-repeat padding-box;
+      padding: 0px 120px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .container-main {
-        width: 85%;
-        height: 90%;
-        background: #FFFFFF 0% 0% no-repeat padding-box;
-        box-shadow: 0px 3px 6px #00000029;
-        border: 1px solid #F5F5F5;
-        border-radius: 8px;
+      width: 85%;
+      height: 90%;
+      background: #ffffff 0% 0% no-repeat padding-box;
+      box-shadow: 0px 3px 6px #00000029;
+      border: 1px solid #f5f5f5;
+      border-radius: 8px;
     }
 
     .container-padding {
-        padding: 32px 80px;
+      padding: 32px 80px;
     }
 
     .container-header {
-        height: 41px;
-        font: normal normal bold 28px/37px Roboto;
-        letter-spacing: 0px;
-        color: #42515F;
+      height: 41px;
+      font: normal normal bold 28px/37px Roboto;
+      letter-spacing: 0px;
+      color: #42515f;
     }
 
     input.input-text {
-        width: 75%;
-        height: 32px;
-        background: #FFFFFF 0% 0% no-repeat padding-box;
-        border: 1px solid #BDBDBD;
-        border-radius: 3px;
-        padding-left: 6px;
+      width: 75%;
+      height: 32px;
+      background: #ffffff 0% 0% no-repeat padding-box;
+      border: 1px solid #bdbdbd;
+      border-radius: 3px;
+      padding-left: 6px;
     }
 
     .label-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 20px;
     }
 
     label.label-header {
-        font: normal normal normal 18px/24px Roboto;
-        letter-spacing: 0px;
-        color: #42515F;
+      font: normal normal normal 18px/24px Roboto;
+      letter-spacing: 0px;
+      color: #42515f;
     }
 
     .radio-field {
-        display: flex;
-        width: 75%;
-        justify-content: space-between;
-        align-items: center;
+      display: flex;
+      width: 75%;
+      justify-content: space-between;
+      align-items: center;
     }
 
     .radio-field-gender {
-        width: 75%;
+      width: 75%;
     }
 
     #salary {
-        width: 180px;
-        height: 37px;
-        background: #FFFFFF 0% 0% no-repeat padding-box;
-        border: 1px solid #BDBDBD;
-        border-radius: 3px;
+      width: 180px;
+      height: 37px;
+      background: #ffffff 0% 0% no-repeat padding-box;
+      border: 1px solid #bdbdbd;
+      border-radius: 3px;
     }
 
     .input-field {
-        width: 75%;
+      width: 75%;
     }
-
     .common-date {
-        height: 37px;
-        background: #FFFFFF 0% 0% no-repeat padding-box;
-        border: 1px solid #BDBDBD;
-        border-radius: 3px;
-        width: 90px;
+      height: 37px;
+      background: #ffffff 0% 0% no-repeat padding-box;
+      border: 1px solid #bdbdbd;
+      border-radius: 3px;
+      width: 90px;
     }
 
     .input-field-date {
-        width: 75%;
-        display: flex;
-        justify-content: space-between;
+      width: 75%;
+      display: flex;
+      justify-content: space-between;
     }
-</style>
-
-</html>					
-									
-									
-									
-									
-									
-									
-									
-									
-									
-									
-									
-									
-									
-									
-									
-									
-									
+  </style>
+</html>
